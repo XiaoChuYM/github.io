@@ -1,4 +1,7 @@
 .codeImg {
-   width: 200px;
-   height: 200px;
+   display: flex;
+   justify-content: left;
+   width: 400;
+   height: 400;
+   padding: 20px;
 }
