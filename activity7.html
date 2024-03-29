@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>每日外卖红包</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer" />
-    <link rel="stylesheet" type="text/css" media="screen" href="centerImg.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
-    <link rel="stylesheet" href="imgContainer.css"> 
-    <meta name="referrer" content="no-referrer" />
+<head>
+  <meta charset="utf-8">
+  <title>每日外卖红包</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <link rel="stylesheet" type="text/css" media="screen" href="centerImg.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
+  <link rel="stylesheet" href="imgContainer.css"> 
+  <meta name="referrer" content="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      padding: 2% 6%; /* 添加整体内边距，单位可以是像素、百分比等 */
+    }
 
-    <style>
-      body {
-          padding-left: 6%; /* 添加整体内边距，单位可以是像素、百分比等 */
-          padding-right: 6%;
-          margin: 0; /* 可以消除默认的外边距，确保内边距起作用 */
-      }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .center-image {
+      text-align: center;
+    }
+
+    .center-image img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
-  </head>
-  <body>
-    <div class="container">
-    <br>
-    <div style="text-align: center;">
-      <span style="font-size:  1.5em; display: inline-block;"> 加入活动分享群: 
-        <a href="https://xiaochuym.github.io/github.io/invite.html" style="color: red;" >点击加入</a> </span>
-  
-    </div>
-   <br>
-    <br>
-    <br>  
-    <br>
-
-    <span style="font-size:  1.5em;"> 长按识别每日可领美团外卖满减奍或：   <a href="http://dpurl.cn/fupo82Cz" style="color: red;" >点我领取</a> </span>
-
-    <br>
-    <br>
-    <div class="center-image">
-      <img src="https://upload-images.jianshu.io/upload_images/11952059-a1f72cc9e19bde5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", width="840">
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2 class="section-title">加入活动分享群:</h2>
+      <div>
+        <p><a href="https://xiaochuym.github.io/github.io/invite.html" style="font-size: 1.5em; color: red;">点击加入</a></p>
+      </div>
     </div>
 
-    <br>
-    <br>
-
-    
-    <span style="font-size:  1.5em;"> 饿了么 1> 长按识别小程序码  </span>
-
-    <br>
-    <br>
-
-    <img src="https://upload-images.jianshu.io/upload_images/11952059-ac0d0d66ce08b38b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240", width="400px", height="400px">
-
-
-    <br>
-    <br>
-    <span style="font-size:  1.5em;"> 饿了么 2>  饿了么App扫码可领外卖满减虹包  </span>
-
-    <br>
-    <br>
-
-    <img src="https://gitee.com/lxiaochu/imgs/raw/master/other/21.png", width="400px", height="400px">
-
-    <bar>
+    <div class="section">
+      <h2 class="section-title">长按识别每日可领美团外卖满减套餐：</h2>
+      <div class="center-image">
+        <img src="https://upload-images.jianshu.io/upload_images/11952059-a1f72cc9e19bde5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Meituan QR Code" width="840">
+      </div>
+      <p><a href="http://dpurl.cn/fupo82Cz" style="font-size: 1.5em; color: red;">点我领取</a></p>
     </div>
-  </body>
+
+    <div class="section">
+      <h2 class="section-title">饿了么 1 > 长按识别小程序码</h2>
+      <div class="centerImg">
+        <img src="https://upload-images.jianshu.io/upload_images/11952059-ac0d0d66ce08b38b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Eleme QR Code" width="400" height="400">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">饿了么 2 > 饿了么App扫码可领外卖满减红包</h2>
+      <div class="centerImg">
+        <img src="https://gitee.com/lxiaochu/imgs/raw/master/other/21.png" alt="Eleme Red Packet QR Code" width="400" height="400">
+      </div>
+    </div>
+  </div>
+</body>
 </html>
