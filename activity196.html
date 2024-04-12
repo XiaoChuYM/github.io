@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,12 +57,19 @@
     button:hover {
       background-color: #cc0000;
     }
+    .time-container {
+      text-align: left;
+    }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <p>&#128337;    2024-04-12 13:30 </p>
+    <div class="time-container">
+      <span id="activityName"></span>
+      <br>
+      <br>
+      &#128337;    2024-04-12 13:30 </div>
 
     <h2>加入活动分享群: <a href="https://xiaochuym.github.io/github.io/invite.html">点击加入</a></h2>
     <br>
@@ -69,7 +77,7 @@
     <h8> <span style='font-size:20px;'>&#127873;</span> 美団/饿了么每日可领外卖券: <a href="https://xiaochuym.github.io/github.io/activity7.html">点我查看</a></h8> 
     <br>
     <br>
-    <h2>【美的】美的空调用了20年老用户，免费换新：
+    <h2>美的空调用了20年老用户，免费换新：
 
       <a href="https://mp.weixin.qq.com/s/t7vFYvSsNhBz5bCeDolQpw">点我查看活动</a>
       <br>
@@ -87,6 +95,9 @@
       <br>
     <script src="./copyTxt.js"></script>
     <script>
+      const activityName = "美的";
+      document.getElementById("activityName").textContent = "【" + activityName + "】";
+      document.title = activityName
       const button1 = document.getElementById('button1');
       const codeText = "#小程序://茶百道点餐/b2eYIsHwbMHgx9E";
       copyText(button1, codeText, function (text) {
