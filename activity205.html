@@ -138,6 +138,12 @@
           xhr.open('GET', 'https://api.github.com/repos/xiaochuym.github.io/github.io/activity205.html', true);
           xhr.send();
         }
+
+
+  // 在页面加载完成后获取文件上传时间
+  window.onload = function () {
+    getFileUploadTime();
+  };
     </script>
   </div>
 </body>
