@@ -80,7 +80,7 @@
     <div class="left-text-container">
       <span id="activityName"></span>
       <br>
-      <span style="font-size:12px;">&#128337;    2024-04-15 16:10</span> </div>
+      <span style="font-size:12px;" id="upload-time"></span> </div>
       <br>
     <ht>加入活动分享群: <a href="https://xiaochuym.github.io/github.io/invite.html">点击加入</a></ht>
     <br>
@@ -118,6 +118,27 @@
       copyText(button1, codeText, function (text) {
         console.log('复制成功');
       });
+
+        function getFileUploadTime() {
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var lastModified = JSON.parse(xhr.responseText).content.last_modified;
+              var uploadTime = new Date(lastModified);
+              var year = uploadTime.getFullYear();
+              var month = ('0' + (uploadTime.getMonth() + 1)).slice(-2); // 月份从0开始，所以要加1，并且保证两位数显示
+              var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
+              var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
+              var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
+              var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
+              var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+              document.getElementById('upload-time').textContent = "&#128337;    " + formattedTime;
+            }
+          };
+          // https://xiaochuym.github.io/github.io/activity204.html
+          xhr.open('GET', 'https://api.github.com/repos/xiaochuym.github.io/github.io/activity205.html', true);
+          xhr.send();
+        }
     </script>
   </div>
 </body>
