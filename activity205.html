@@ -119,30 +119,40 @@
         console.log('复制成功');
       });
 
-        function getFileUploadTime() {
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              var lastModified = JSON.parse(xhr.responseText).content.last_modified;
-              var uploadTime = new Date(lastModified);
-              var year = uploadTime.getFullYear();
-              var month = ('0' + (uploadTime.getMonth() + 1)).slice(-2); // 月份从0开始，所以要加1，并且保证两位数显示
-              var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
-              var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
-              var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
-              var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
-              document.getElementById('upload-time').textContent = "&#128337;    " + formattedTime;
-            }
-          };
-          // https://xiaochuym.github.io/github.io/activity204.html
-          xhr.open('GET', 'https://api.github.com/repos/xiaochuym.github.io/github.io/activity205.html', true);
-          xhr.send();
+
+        // 获取当前文件名
+        function getCurrentFileName() {
+          var url = window.location.href;
+          var index = url.lastIndexOf('/');
+          var fileName = url.substring(index + 1);
+          return fileName;
         }
+
+          function getFileUploadTime(fileName) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                var lastModified = JSON.parse(xhr.responseText)[0].commit.committer.date;
+                var uploadTime = new Date(lastModified);
+                var year = uploadTime.getFullYear();
+                var month = ('0' + (uploadTime.getMonth() + 1)).slice(-2); // 月份从0开始，所以要加1，并且保证两位数显示
+                var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
+                var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
+                var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
+                // var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
+                var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
+                document.getElementById('upload-time').innerHTML = '&#128337; ' + formattedTime;
+              }
+            };
+            xhr.open('GET', 'https://api.github.com/repos/xiaochuym/github.io/commits?path=' + fileName, true);
+            xhr.send();
+          }
 
 
   // 在页面加载完成后获取文件上传时间
   window.onload = function () {
-    getFileUploadTime();
+    var fileName = getCurrentFileName();
+    getFileUploadTime(fileName);
   };
     </script>
   </div>
