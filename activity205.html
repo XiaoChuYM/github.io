@@ -130,8 +130,7 @@
               var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
               var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
               var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
-              var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
-              var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+              var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
               document.getElementById('upload-time').textContent = "&#128337;    " + formattedTime;
             }
           };
