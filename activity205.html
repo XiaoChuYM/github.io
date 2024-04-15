@@ -157,6 +157,7 @@
     // 小于一小时，显示 x 分钟前
     if (diffMillis < 3600000) {
       var minutes = Math.floor(diffMillis / 60000);
+      if(minutes == 0) minutes = 1;
       return minutes + ' 分钟前';
     }
 
