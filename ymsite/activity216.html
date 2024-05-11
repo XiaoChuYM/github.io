@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <link rel="stylesheet" type="text/css" media="screen" href="centerImg.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
+  <link rel="stylesheet" href="imgContainer.css">
+  <title></title>
+  <style>
+    body {
+      padding: 20px;
+      text-align: center;
+      padding-left: 6%;
+      /* 添加整体内边距，单位可以是像素、百分比等 */
+      padding-right: 6%;
+      margin: 0;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: start;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    ht {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      text-align: start;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    h8 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: red;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .center-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    .left-text-container {
+      text-align: left;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-BFTT9GJLL6');
+  </script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="left-text-container">
+      <span id="activityName"></span>
+      <br>
+      <span style="font-size:12px;" id="upload-time"></span> </div>
+      <br>
+    <ht>加入活动分享群: <a href="https://xiaochuym.github.io/github.io/invite.html">点击加入</a></ht>
+    <br>
+    <br>
+    
+    <h8> <span style='font-size:18px;'>&#127873;</span> 美団/饿了么每日可领外卖券: <a href="https://xiaochuym.github.io/github.io/activity7.html">点我查看</a></h8> 
+    <br>
+    <br>
+    <h2>【和包周三会员日抢1000个积分】
+
+     
+
+      
+
+      
+
+      
+      <!-- <a href="https://mp.weixin.qq.com/s/t7vFYvSsNhBz5bCeDolQpw">点我查看活动</a> -->
+      </h2>
+
+      <div class="left-text-container"></div>
+      <h3>
+        10/15点整开抢！和包APP->我的->和包会员->周三会员日->整点抢1000和包积分，累计积分兑换云闪付红包、实物等奖品
+        <!-- <a href="https://mp.weixin.qq.com/s/t7vFYvSsNhBz5bCeDolQpw">点我查看活动</a> -->
+        <br>
+        </h3>
+        <div class="left-text-container"></div>
+    <br>
+
+    <div class="center-image">
+      <img src="http://pic.kuaizhan.com/g3/29/60/180f-9b98-4ab6-bb1d-d2b70956e5e970" alt="Image">
+    </div>
+
+      <br>
+    <script src="./copyTxt.js"></script>
+    <script>
+      
+      
+      
+      
+      
+      
+      // 名称名称名称名称名称名称名称名称名称名称名称名称
+      const activityName = "和包";
+      document.getElementById("activityName").textContent = "【" + activityName + "】";
+      document.title = activityName
+      const button1 = document.getElementById('button1');
+      const codeText = "#小程序://茶百道点餐/b2eYIsHwbMHgx9E";
+      copyText(button1, codeText, function (text) {
+        console.log('复制成功');
+      });
+
+
+       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      // 获取当前文件名
+        function getCurrentFileName() {
+          var url = window.location.href;
+          var index = url.lastIndexOf('/');
+          var fileName = url.substring(index + 1);
+          return fileName;
+        }
+
+          function getFileUploadTime(fileName) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                var lastModified = JSON.parse(xhr.responseText)[0].commit.committer.date;
+                var uploadTime = new Date(lastModified);
+                // var year = uploadTime.getFullYear();
+                // var month = ('0' + (uploadTime.getMonth() + 1)).slice(-2); // 月份从0开始，所以要加1，并且保证两位数显示
+                // var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
+                // var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
+                // var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
+                // // var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
+                // var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
+                var formattedTime = formatTimeDifference(uploadTime);
+                document.getElementById('upload-time').innerHTML = '&#128337; ' + formattedTime;
+              }
+            };
+            xhr.open('GET', 'https://api.github.com/repos/xiaochuym/github.io/commits?path=' + fileName, true);
+            xhr.send();
+          }
+
+  function formatTimeDifference(date1) {
+    var currentTimeMillis = Date.now();
+    var date2 = new Date(currentTimeMillis);
+    var diffMillis = Math.abs(date2 - date1); // 两个日期之间的毫秒差
+
+    // 小于一小时，显示 x 分钟前
+    if (diffMillis < 3600000) {
+      var minutes = Math.floor(diffMillis / 60000);
+      if(minutes == 0) minutes = 1;
+      return minutes + ' 分钟前';
+    }
+
+    // 小于一天，显示 x 小时前
+    if (diffMillis < 86400000) {
+      var hours = Math.floor(diffMillis / 3600000);
+      return hours + ' 小时前';
+    }
+
+    // 小于三天，显示 x 天前
+    if (diffMillis < 259200000) {
+      var days = Math.floor(diffMillis / 86400000);
+      return days + ' 天前';
+    }
+
+    // 大于等于三天，显示具体日期
+    var year = date2.getFullYear();
+    var month = ('0' + (date2.getMonth() + 1)).slice(-2);
+    var day = ('0' + date2.getDate()).slice(-2);
+    return year + '-' + month + '-' + day;
+  }
+
+
+  // 在页面加载完成后获取文件上传时间
+  window.onload = function () {
+    var fileName = getCurrentFileName();
+    getFileUploadTime(fileName);
+  };
+    </script>
+  </div>
+</body>
+</html>

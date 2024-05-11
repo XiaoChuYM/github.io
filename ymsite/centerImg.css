@@ -1,0 +1,9 @@
+.center-image {
+    display: flex;
+    max-width: 100%;
+    min-width: 50%;
+    height: auto;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
