@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <link rel="stylesheet" type="text/css" media="screen" href="centerImg.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
+  <link rel="stylesheet" href="imgContainer.css">
+  <link rel="stylesheet" href="commonHead.css">
+  <link rel="stylesheet" type="text/css" href="rounded_button.css">
+  <title></title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BFTT9GJLL6');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="left-text-container">
+      <span id="activityName"></span>
+      <br>
+      <span style="font-size:12px;" id="upload-time"></span>
+    </div>
+    <br>
+    <ht>加入活动分享群: <a href="https://xiaochuym.github.io/github.io/invite.html">点击加入</a></ht>
+    <br> <br>
+    <!--
+    <br>
+
+    <h8> <span style='font-size:18px;'>&#127873;</span> 美団/饿了么每日可领外卖券: <a
+        href="https://xiaochuym.github.io/github.io/activity7.html">点我查看</a></h8>
+    <br> -->
+
+
+
+    <h8> <span style='font-size:18px;'>&#127873;</span> 【天猫】618完整攻略：: <a
+        href="https://github-io-b0o.pages.dev/activity332">点我查看</a></h8>
+    <br>
+    <h8> <span style='font-size:18px;'>&#127873;</span> 【天猫】618年中促红包必有：: <a href="https://m.tb.cn/h.gdWkcL1">点我查看</a>
+    </h8>
+    <br>
+    <br>
+    <h2>
+      <!-- <a href="https://wechat-social-group-pro.pf.jd.com/?aid=JD_0005">点我查看</a> -->
+
+    </h2>
+    <br>
+    <div class="left-text-container">
+      <!-- <button  class="rounded_button" id="button2" type="primary" is="ui-button">点击复制</button> -->
+      <!-- <a>1$LDEKWFJMW1l$:// HU7679</a> <button  class="rounded_button" id="button1" type="primary" is="ui-button">点击复制口令</button> -->
+      微信扫码，华为手机
+  <br>
+下拉底部 
+<br>
+有支付20巻  看看有无
+    </div>
+
+    <div class="center-image">
+      <img
+        src="http://pic.kuaizhan.com/g3/8d/83/9f9b-6c0a-4bd7-8825-2895ca80ecac56"
+        alt="Image">
+    </div>
+
+
+
+    <br>
+    <script src="./copyTxt.js"></script>
+    <script>
+
+
+
+
+
+
+      // 名称名称名称名称名称名称名称名称名称名称名称名称
+      const activityName = "华为周五";
+      document.getElementById("activityName").textContent = "【" + activityName + "】";
+      document.title = activityName
+      const button1 = document.getElementById('button1');
+      const codeText = "$8NFdWvWFMNr$:// ZH9102";
+      copyText(button1, "1$LDEKWFJMW1l$:// HU7679", function (text) {
+        console.log('复制成功');
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // 获取当前文件名
+      function getCurrentFileName() {
+        var url = window.location.href;
+        var index = url.lastIndexOf('/');
+        var fileName = url.substring(index + 1);
+        if (fileName.endsWith(".html")) {
+          return fileName
+        } else {
+          return fileName + ".html";
+        }
+      }
+
+      function getFileUploadTime(fileName) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var lastModified = JSON.parse(xhr.responseText)[0].commit.committer.date;
+            var uploadTime = new Date(lastModified);
+            // var year = uploadTime.getFullYear();
+            // var month = ('0' + (uploadTime.getMonth() + 1)).slice(-2); // 月份从0开始，所以要加1，并且保证两位数显示
+            // var day = ('0' + uploadTime.getDate()).slice(-2); // 日期保证两位数显示
+            // var hour = ('0' + uploadTime.getHours()).slice(-2); // 小时保证两位数显示
+            // var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
+            // // var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
+            // var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
+            var formattedTime = formatTimeDifference(uploadTime);
+            document.getElementById('upload-time').innerHTML = '&#128337; ' + formattedTime;
+          }
+        };
+        xhr.open('GET', 'https://api.github.com/repos/xiaochuym/github.io/commits?path=' + fileName, true);
+        xhr.send();
+      }
+
+      function formatTimeDifference(date1) {
+        var currentTimeMillis = Date.now();
+        var date2 = new Date(currentTimeMillis);
+        var diffMillis = Math.abs(date2 - date1); // 两个日期之间的毫秒差
+
+        // 小于一小时，显示 x 分钟前
+        if (diffMillis < 3600000) {
+          var minutes = Math.floor(diffMillis / 60000);
+          if (minutes == 0) minutes = 1;
+          return minutes + ' 分钟前';
+        }
+
+        // 小于一天，显示 x 小时前
+        if (diffMillis < 86400000) {
+          var hours = Math.floor(diffMillis / 3600000);
+          return hours + ' 小时前';
+        }
+
+        // 小于三天，显示 x 天前
+        if (diffMillis < 259200000) {
+          var days = Math.floor(diffMillis / 86400000);
+          return days + ' 天前';
+        }
+
+        // 大于等于三天，显示具体日期
+        var year = date2.getFullYear();
+        var month = ('0' + (date2.getMonth() + 1)).slice(-2);
+        var day = ('0' + date2.getDate()).slice(-2);
+        return year + '-' + month + '-' + day;
+      }
+
+
+      // 在页面加载完成后获取文件上传时间
+      window.onload = function () {
+        var fileName = getCurrentFileName();
+        getFileUploadTime(fileName);
+      };
+    </script>
+  </div>
+</body>
+
+</html>
