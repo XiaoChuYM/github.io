@@ -1,28 +1,77 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello 好厚米！！！</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="index.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小厨羊毛站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .link {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 10px 20px;
+            color: #007BFF;
+            text-decoration: none;
+            border: 2px solid #007BFF;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            animation: slideIn 2s ease-in-out;
+        }
+        .link:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 
-        gtag('config', 'G-BFTT9GJLL6');
-    </script>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+  
+          gtag('config', 'G-BFTT9GJLL6');
+      </script>
 </head>
-
 <body>
-    <div id="main-content">
-
+    <div class="container">
+        <h1>欢迎来到小厨的羊毛站!</h1>
+        <p>已加入群聊的小伙伴不要重复添加哦～</p>
+        <a href="page1.html" class="link">欢迎加入羊毛群</a>
+        <a href="page2.html" class="link">淘宝查券说明</a>
     </div>
 </body>
-
 </html>
