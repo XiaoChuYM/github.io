@@ -1,64 +1,73 @@
-/* styles.css */
-joinBtnBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-
 .joinBtnContainer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
     position: relative;
 }
 
+
+/* 应用动画到图标元素 */
 .joinBtnStar {
-    position: absolute;
-    width: 20px;
-    height: 20px;
+    display: inline-block;
+    scale: 0.2;
+    font-size: 2px;
+    /* 或根据您的图标大小调整 */
+    animation: spin 2s linear infinite;
+    /* 动画名称、持续时间、速度曲线、循环次数 */
+    transform-origin: center center;
+    /* 确保围绕自身中心旋转 */
 }
 
 .star-left {
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: rotate 2s linear infinite;
+    left: -10px;
+    /* 调整值，使星星更靠近按钮 */
+    animation: spin 2s linear infinite;
 }
 
 .star-right {
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: rotate 2s linear infinite reverse;
+    right: -10px;
+    /* 调整值，使星星更靠近按钮 */
+    animation: spin 2s linear infinite;
 }
 
-@keyframes rotate {
-    from {
-        transform: translateY(-50%) translateX(-50%) rotate(0deg);
+/* 定义旋转动画 */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
-    to {
-        transform: translateY(-50%) translateX(-50%) rotate(360deg);
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
 .joinBtn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #007bff;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #357be6;
     color: white;
+    height: 40px;
     width: 300px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 16px;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
     transition: background-color 0.3s ease;
 }
 
 .joinBtn:hover {
-    background-color: #0056b3;
+    background-color: rgb(255, 81, 0);
 }
 
 .joinBtn .icon {
     margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
