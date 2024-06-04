@@ -10,7 +10,6 @@
 /* 应用动画到图标元素 */
 .joinBtnStar {
     display: inline-block;
-    scale: 0.2;
     font-size: 2px;
     /* 或根据您的图标大小调整 */
     animation: spin 2s linear infinite;
@@ -43,7 +42,7 @@
 }
 
 .joinBtn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     padding: 10px 20px;
     margin-left: 20px;
@@ -67,6 +66,7 @@
 }
 
 .joinBtn .icon {
+    margin-left: 20px;
     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
