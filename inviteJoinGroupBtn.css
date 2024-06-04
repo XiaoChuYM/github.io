@@ -1,0 +1,64 @@
+/* styles.css */
+joinBtnBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.joinBtnContainer {
+    position: relative;
+}
+
+.joinBtnStar {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.star-left {
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 2s linear infinite;
+}
+
+.star-right {
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 2s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateY(-50%) translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) translateX(-50%) rotate(360deg);
+    }
+}
+
+.joinBtn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.joinBtn:hover {
+    background-color: #0056b3;
+}
+
+.joinBtn .icon {
+    margin-right: 10px;
+}
