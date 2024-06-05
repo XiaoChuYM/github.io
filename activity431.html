@@ -121,8 +121,8 @@
 
 
 
-      // 获取当前文件名
-      function getCurrentFileName() {
+           // 获取当前文件名
+           function getCurrentFileName() {
         var url = window.location.href;
         var index = url.lastIndexOf('/');
         var fileName = url.substring(index + 1);
@@ -171,7 +171,26 @@
           var hours = Math.floor(diffMillis / 3600000);
           return hours + ' 小时前';
         }
+
+        // 小于三天，显示 x 天前
+        if (diffMillis < 259200000) {
+          var days = Math.floor(diffMillis / 86400000);
+          return days + ' 天前';
+        }
+
+        // 大于等于三天，显示具体日期
+        var year = date1.getFullYear();
+        var month = ('0' + (date1.getMonth() + 1)).slice(-2);
+        var day = ('0' + date1.getDate()).slice(-2);
+        return year + '-' + month + '-' + day;
       }
+
+
+      // 在页面加载完成后获取文件上传时间
+      window.onload = function () {
+        var fileName = getCurrentFileName();
+        getFileUploadTime(fileName);
+      };
     </script>
   </div>
 </body>
