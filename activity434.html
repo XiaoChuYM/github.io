@@ -140,4 +140,53 @@
               // var minute = ('0' + uploadTime.getMinutes()).slice(-2); // 分钟保证两位数显示
               // // var second = ('0' + uploadTime.getSeconds()).slice(-2); // 秒保证两位数显示
               // var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
-        
+              var formattedTime = formatTimeDifference(uploadTime);
+              document.getElementById('upload-time').innerHTML = '&#128337; ' + formattedTime;
+            }
+          };
+          xhr.open('GET', 'https://api.github.com/repos/xiaochuym/github.io/commits?path=' + fileName, true);
+          xhr.send();
+        }
+
+        function formatTimeDifference(date1) {
+          var currentTimeMillis = Date.now();
+          var date2 = new Date(currentTimeMillis);
+          var diffMillis = Math.abs(date2 - date1); // 两个日期之间的毫秒差
+
+          // 小于一小时，显示 x 分钟前
+          if (diffMillis < 3600000) {
+            var minutes = Math.floor(diffMillis / 60000);
+            if (minutes == 0) minutes = 1;
+            return minutes + ' 分钟前';
+          }
+
+          // 小于一天，显示 x 小时前
+          if (diffMillis < 86400000) {
+            var hours = Math.floor(diffMillis / 3600000);
+            return hours + ' 小时前';
+          }
+
+          // 小于三天，显示 x 天前
+          if (diffMillis < 259200000) {
+            var days = Math.floor(diffMillis / 86400000);
+            return days + ' 天前';
+          }
+
+          // 大于等于三天，显示具体日期
+          var year = date1.getFullYear();
+          var month = ('0' + (date1.getMonth() + 1)).slice(-2);
+          var day = ('0' + date1.getDate()).slice(-2);
+          return year + '-' + month + '-' + day;
+        }
+
+
+        // 在页面加载完成后获取文件上传时间
+        window.onload = function () {
+          var fileName = getCurrentFileName();
+          getFileUploadTime(fileName);
+        };
+      </script>
+    </div>
+</body>
+
+</html>
