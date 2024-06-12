@@ -161,8 +161,7 @@
           display: none !important;
         }
       </style>
-      <div data-clipboard-text="" class="icopy" style="text-align:center;background:#9e28e9">↓↓↓↓↓↓复制下方口 令，打開淘
-        寶APP↓↓↓↓↓↓</div>
+      <div data-clipboard-text="" class="icopy" style="text-align:center;background:#9e28e9">↓↓↓复制口 令，打開淘寶A↓↓↓</div>
 
       <div class="drugsword">
         <div class="medicine-bag">
@@ -201,7 +200,7 @@
       const url = new URL(window.location.href);
 
       // 获取特定参数
-      const taowords = url.searchParams.get('taowords');
+      const taowords = "6$" + url.searchParams.get('taowords') + "$:// MF3135";
       document.getElementById("taowords").textContent = taowords
       const pic = url.searchParams.get('pic');
       document.getElementById("pic").src = pic
