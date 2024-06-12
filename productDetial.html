@@ -121,7 +121,7 @@
           height: 0;
           border-top: 12px solid transparent;
           border-left: 10px solid #fa9b7e;
-          border-bottom: 12px solid透明;
+          border-bottom: 12px solid transparent;
         }
 
         .jtthree {
@@ -140,7 +140,7 @@
           left: -13px;
           width: 0;
           height: 0;
-          border-top: 12px solid透明;
+          border-top: 12px solid transparent;
           border-left: 10px solid #fa8673;
           border-bottom: 12px solid transparent;
         }
@@ -156,8 +156,8 @@
         }
 
         .nomen-proprium {
-          font-size: 18px;
-          text-align: center;
+          font-size: 12px;
+          text-align: left;
           color: #fb6a65;
         }
 
@@ -178,10 +178,17 @@
           margin: 20px;
         }
 
+        .code-left,
+        .code-right {
+          flex: 0 1 auto;
+          white-space: nowrap;
+          margin: 5px;
+        }
+
         .code-center {
           flex: 1 1 auto;
           margin: 5px;
-          display: flexbox;
+          display: flex;
           justify-content: center;
           align-items: center;
           /* 允许长词在必要时换行 */
@@ -199,6 +206,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div type="button" data-clipboard-text="0((RBFdWwdEW0j))/ AC001" class="icopy" id="button1">一键复制</div>
         <div id="copy-tip" class="copy-tip">
