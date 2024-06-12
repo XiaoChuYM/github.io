@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
   <link rel="stylesheet" href="imgContainer.css">
   <link rel="stylesheet" href="commonHead.css">
+  <link rel="stylesheet" href="inviteJoinGroupBtn.css">
   <link rel="stylesheet" type="text/css" href="rounded_button.css">
   <title></title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
@@ -27,7 +28,14 @@
 <body>
   <div class="container">
     <br>
-    <ht> <span style='font-size:18px;'>&#127881;</span> 加入活动分享群: <a href="https://ym-8st.pages.dev/invite.html">点击加入</a></ht>
+    <div class="joinBtnContainer">
+      <a href="https://ym-8st.pages.dev/invite.html" class="joinBtn">
+        <img src="fixImgs/star.png" alt="Star" class="joinBtnStar star-left icon-rotate" width="20" height="20">
+        <img src="fixImgs/wechat.png" alt="Icon" class="icon" width="40" height="40"> <span
+          style="margin-right: 20px;">点击加入活动分享群</span>
+        <img src="fixImgs/star.png" alt="Star" class="joinBtnStar star-right icon-rotate" width="20" height="20">
+      </a>
+    </div>
     <br> <br>
     <!--
     <br>
@@ -113,7 +121,7 @@
           height: 0;
           border-top: 12px solid transparent;
           border-left: 10px solid #fa9b7e;
-          border-bottom: 12px solid transparent;
+          border-bottom: 12px solid透明;
         }
 
         .jtthree {
@@ -132,7 +140,7 @@
           left: -13px;
           width: 0;
           height: 0;
-          border-top: 12px solid transparent;
+          border-top: 12px solid透明;
           border-left: 10px solid #fa8673;
           border-bottom: 12px solid transparent;
         }
@@ -149,7 +157,7 @@
 
         .nomen-proprium {
           font-size: 12px;
-          text-align: left;
+          text-align: center;
           color: #fb6a65;
         }
 
@@ -160,16 +168,46 @@
         .kz-float-layer {
           display: none !important;
         }
+
+        .code-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 20px;
+        }
+
+        .code-left,
+        .code-right {
+          flex: 0 1 auto;
+          white-space: nowrap;
+          margin: 5px;
+        }
+
+        .code-center {
+          flex: 1 1 auto;
+          margin: 5px;
+          display: flexbox;
+          justify-content: center;
+          align-items: center;
+          /* 允许长词在必要时换行 */
+        }
       </style>
-      <div data-clipboard-text="" class="icopy" style="text-align:center;background:#9e28e9">↓↓↓复制口 令，打開淘寶A↓↓↓</div>
+      <div data-clipboard-text="" class="icopy" style="text-align:center;background:#9e28e9">↓↓↓复制口 令，打開淘寶↓↓↓</div>
+
 
       <div class="drugsword">
-        <div class="medicine-bag">
-          <div>
-            <div id="nomen-proprium" class="nomen-proprium" style="text-align: center;">
-              复制红框内信息→ <span id="taowords"></span> ←打开手TaoAPP即可
+        <div class="code-container">
+          <div class="code-left">复制红框内信息→</div>
+          <div class="code-center">
+            <div class="medicine-bag">
+              <div id="nomen-proprium" class="nomen-proprium">
+                <span id="taowords"></span>
+              </div>
             </div>
           </div>
+          <div class="code-right">←打开手TaoAPP即可</div>
         </div>
         <div type="button" data-clipboard-text="0((RBFdWwdEW0j))/ AC001" class="icopy" id="button1">一键复制</div>
         <div id="copy-tip" class="copy-tip">
