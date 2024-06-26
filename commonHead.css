@@ -59,3 +59,25 @@ body {
   .left-text-container {
     text-align: left;
   }
+
+  .headContainer {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+.link {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  color: #007BFF;
+  text-decoration: none;
+  border: 2px solid #007BFF;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  animation: slideIn 2s ease-in-out;
+}
+.link:hover {
+  background-color: #007BFF;
+  color: #fff;
+}

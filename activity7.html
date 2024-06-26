@@ -9,78 +9,102 @@
   <link rel="stylesheet" type="text/css" media="screen" href="centerImg.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="codeImg.css" />
   <link rel="stylesheet" href="imgContainer.css"> 
-  <meta name="referrer" content="no-referrer" />
   <style>
     body {
       margin: 0;
-      padding: 2% 6%; /* 添加整体内边距，单位可以是像素、百分比等 */
+      padding: 2% 6%;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2em;
+      color: #444;
     }
 
     .container {
       max-width: 800px;
       margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .section {
-      margin-top: 60px;
+      margin-top: 40px;
       text-align: center;
     }
 
     .section-title {
       font-size: 1.5em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      color: #666;
     }
 
     .center-image {
       text-align: center;
     }
 
-    .center-image img {
+    .center-image img,
+    .centerImg img {
       max-width: 100%;
       height: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: red;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: darkred;
     }
   </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-  
-        gtag('config', 'G-BFTT9GJLL6');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFTT9GJLL6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BFTT9GJLL6');
+  </script>
 </head>
 <body>
+  <h1>外卖红包 每天可领</h1>
   <div class="container">
     <div class="section">
-
-    </div>
-
-    <div class="section">
-      <p><a href="http://dpurl.cn/LUxJR2Tz" style="font-size: 1.5em; color: red;">美团外卖节点我领取大额红包</a></p>
-
-        <h2 class="section-title">或长按识别每日可领美团外卖满减套餐 ：</h2>
-        <div class="center-image">
-          <img src="https://upload-images.jianshu.io/upload_images/11952059-ce3e0c86f2c6a193.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Meituan QR Code" width="840">
-        </div>
+      <a href="http://dpurl.cn/S3OHeWVz" class="btn">美团外卖节点我领取大额红包</a>
+      <h2 class="section-title">或长按识别每日可领美团外卖满减套餐：</h2>
+      <div class="center-image">
+        <img src="http://upload-images.jianshu.io/upload_images/11952059-1924d6f309cfe420.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1260/q/50" alt="Meituan QR Code">
+      </div>
     </div>
 
     <div class="section">
       <h2 class="section-title">饿了么 1 > 长按识别小程序码</h2>
       <div class="centerImg">
-        <img src="https://upload-images.jianshu.io/upload_images/11952059-ac0d0d66ce08b38b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Eleme QR Code" width="400" height="400">
+        <img src="https://upload-images.jianshu.io/upload_images/11952059-ac0d0d66ce08b38b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Eleme QR Code">
       </div>
     </div>
 
     <div class="section">
       <h2 class="section-title">饿了么 2 > 饿了么App扫码可领外卖满减红包</h2>
       <div class="centerImg">
-        <img src="https://gitee.com/lxiaochu/imgs/raw/master/other/21.png" alt="Eleme Red Packet QR Code" width="400" height="400">
+        <img src="https://gitee.com/lxiaochu/imgs/raw/master/other/21.png" alt="Eleme Red Packet QR Code">
       </div>
     </div>
   </div>
